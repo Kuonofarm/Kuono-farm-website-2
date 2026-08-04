@@ -1,10 +1,20 @@
-body{margin:0;font-family:Georgia,serif;background:#f7f5f0;color:#2f2f2f;line-height:1.7}
-nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,.9);padding:16px;text-align:center}
-nav a{margin:0 18px;text-decoration:none;color:#304031;font-weight:bold}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+:root{--cream:#f7f5f0;--forest:#304031;--sage:#70816A;--text:#444}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:var(--cream);color:var(--text);line-height:1.8}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:center;gap:2rem;padding:20px;background:rgba(255,255,255,.78);backdrop-filter:blur(8px);z-index:99}
+nav a{text-decoration:none;color:var(--forest);font-weight:600}
 .hero{height:100vh;background:url('images/haleakala.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
-.overlay{background:linear-gradient(transparent,rgba(0,0,0,.65));width:100%;padding:60px;color:white}
-section{max-width:1100px;margin:auto;padding:70px 25px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.card{background:#fff;padding:24px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-img.full{width:100%;border-radius:14px}
-footer{background:#304031;color:#fff;text-align:center;padding:40px}
+.hero .overlay{width:100%;padding:4rem;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.hero h1{font:600 4rem 'Cormorant Garamond',serif;color:#fff}
+.hero p{font-size:1.2rem;color:#f3f3f3;max-width:520px}
+.btn{display:inline-block;margin-top:1.5rem;padding:14px 28px;border:1px solid #fff;color:#fff;text-decoration:none}
+section{max-width:1200px;margin:auto;padding:6rem 2rem}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
+.two img,.banner img{width:100%;border-radius:4px}
+h2{font:600 2.8rem 'Cormorant Garamond',serif;color:var(--forest);margin-bottom:1rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:2rem}
+.card{padding:1.5rem;border-top:3px solid var(--sage)}
+.banner{padding:0;max-width:none}
+footer{background:var(--forest);color:#fff;text-align:center;padding:3rem}
+@media(max-width:800px){.two{grid-template-columns:1fr}.hero h1{font-size:3rem}}

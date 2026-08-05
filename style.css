@@ -516,7 +516,25 @@ footer p{
     grid-template-columns:1fr;
 
 }
+.feature-grid.reverse{
 
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.feature-grid.reverse .feature-image{
+
+    order:1;
+
+}
+
+.feature-grid.reverse .feature-text{
+
+    order:2;
+
+}
 .story,
 .offerings,
 .feature,
